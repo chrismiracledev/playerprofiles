@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="js/lib/all.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Carolina Hurricanes - home</title>
+    </head>
+    <body onload="getPlayers()">
+        <header id="page-hero" class="site-header">
+
+            <nav class="site-nav navbar navbar-expand-lg navbar-dark">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#page-hero">
+                        <img class="navbar-brand-icon mx-1" src="images/CanesAssets/PrimaryLogo.png" alt="">Carolina Hurricanes</a>
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"></span></button>
+
+                    <section class="collapse navbar-collapse" id="myTogglerNav">
+
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-item nav-link active" href="index.html">home</a>
+                            <a class="nav-item nav-link" href="analytics.html">analytics</a>
+                            <a class="nav-item nav-link" href="lines.html">lines</a>
+                            <a class="nav-item nav-link" href="team-stats.html">team stats</a>
+                        </div> <!-- Navbar -->
+
+                    </section>
+                    
+                </div> <!-- Container -->
+
+            </nav>
+
+            <section class="layout-hero d-flex align-items-start text-light text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-sm-8">
+                            
+                        </div> <!-- Col-11 -->
+                    </div> <!-- Row -->
+                </div> <!-- Container -->
+            </section>
+
+        </header>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- The Modal -->
+                    <div id="card__modal" class="modal">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img class="img-fluid" src="images/CanesHeadshots/Andrei SvechnikovHeadshot.jpg" alt="Andrei Svechnikov Headshot">
+                                    </div>
+                                    <div class="col-8">
+                                        <h6>Andrei Svechnikov</h6>
+                                        <h6>RW - 37</h6>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <p>Birth Place: </p>
+                                                <p>Birth Date:</p>
+                                                <p>Age: </p>
+                                                <p>Height: </p>
+                                                <p>Weight: </p>
+                                                <p>Shoots: </p>
+                                            </div>
+                                            <div class="col-9">
+                                                <p>Barnaul, RUS</p>
+                                                <p>2000-03-26</p>
+                                                <p>21</p>
+                                                <p>6' 2"</p>
+                                                <p>195 lb</p>
+                                                <p>Left</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-xl-4 my-1 my-lg-3">
+            <button class="card-button" id="card__button">
+                <div class="card">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-5">
+                                <img class="img-fluid" src="images/CanesHeadshots/Andrei SvechnikovHeadshot.jpg" alt="Andrei Svechnikov Headshot">
+                            </div> <!-- col -->
+                            <div class="col-7">
+                                <div class="card-body">
+                                    <h6 class="card-title"></h6>
+                                    <p class="card-text"></p>
+                                </div> <!-- card body -->
+                            </div> <!-- col -->
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <article class="page-cards-section">
+
+            <div class="layout-cards container-fluid">
+                <div id="player__cards" class="row small-gutters">
+                </div> <!-- row (card injected from 'scripts.js')-->
+            </div> <!-- container -->
+
+        </article>
+
+        <footer class="site-footer bg-secondary d-flex justify-content-center">
+
+            <section class="layout-social py-5">
+                <div class="container-fluid">
+                    <a class="text-light px-3 text-decoration-none" href="http://twitter.com">
+                        <i class="layout-icon fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a class="text-light px-3 text-decoration-none" href="http://linkedin.com">
+                        <i class="layout-icon fab fa-linkedin fa-3x"></i>
+                    </a>
+                    <a class="text-light px-3 text-decoration-none" href="http://github.com">
+                        <i class="layout-icon fab fa-github fa-3x"></i>
+                    </a>
+                </div> <!-- Container-fluid -->
+            </section>
+            
+
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+    </body>
+</html>
