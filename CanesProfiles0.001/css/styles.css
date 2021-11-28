@@ -114,8 +114,7 @@ body {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 90vw; /* Could be more or less, depending on screen size */
-  height: 90vh;
+  width: 95vw; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */

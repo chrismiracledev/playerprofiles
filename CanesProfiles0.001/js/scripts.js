@@ -5,6 +5,32 @@ const player_info = []
 
 const api_url = 'https://statsapi.web.nhl.com/api/v1/teams/12/roster'
 
+function createModal(click) {
+    console.log(click);
+    var playerIndex = click.getAttribute('data-index');
+    console.log(playerIndex);
+
+    var modal = document.querySelector("#card__modal");
+    modal.style.display = "block";
+
+    document.querySelector("#modal__player__firstName").innerHTML = player_info[playerIndex].firstName;
+    document.querySelector("#modal__player__lastName").innerHTML = player_info[playerIndex].lastName;
+    document.querySelector("#modal__player__image").setAttribute("src", `images/canesHeadshots/${player_info[playerIndex].fullName}Headshot.jpg`);
+    document.querySelector("#modal__player__number").innerHTML = `#${player_info[playerIndex].primaryNumber}`;
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+}
+
 async function getIndividualPlayer(player_id, player_link) {
     const player_url = 'https://statsapi.web.nhl.com' + player_link;
     const response = await fetch(player_url);
@@ -41,17 +67,22 @@ async function getIndividualPlayer(player_id, player_link) {
     // build your card html and shove it in the div here
     card = card + `
         <div class="col-12 col-lg-6 col-xl-4 my-1 my-lg-3">
-            <button class="card-button" id="card__button__${currentPlayer.id}">
+            <button class="card-button" id="card__button__${currentPlayer.id}" data-index="${i}" onclick="createModal(this)">
                 <div class="card" id="${currentPlayer.id}">
                     <div class="card-block">
                         <div class="row">
-                            <div class="col-5">
+                            <div class="col-4 pl-0">
                                 <img class="img-fluid" src="images/CanesHeadshots/${currentPlayer.fullName}Headshot.jpg" alt="${currentPlayer.fullName}Headshot">
                             </div> <!-- col -->
-                            <div class="col-7">
-                                <div class="card-body">
-                                    <h6 class="card-title">${currentPlayer.fullName}  -  #${currentPlayer.primaryNumber}</h6>
-                                    <p class="card-text">${currentPlayer.primaryPositionCode} - ${currentPlayer.height} - ${currentPlayer.weight} - Age: ${currentPlayer.currentAge}</p>
+                            <div class="col-8 pl-0">
+                                <div class="row card-body px-0">
+                                    <div class=" col-4 border-right border-secondary">
+                                        <h6 class="card-title">#${currentPlayer.primaryNumber}</h6>
+                                    </div>
+                                    <div class="col-8 pr-0">
+                                        <h6 class="text-left">${currentPlayer.firstName}</h6>
+                                        <h6 class="text-left">${currentPlayer.lastName}</h6>
+                                    </div>
                                 </div> <!-- card body -->
                             </div> <!-- col -->
                         </div>
@@ -213,28 +244,28 @@ console.log(player_links)
 // document.querySelectorAll(".card-text").forEach(item => console.log("3"))
 
 // Get the modal
-var modal = document.getElementById("card__modal");
+// var modal = document.getElementById("card__modal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("card__button");
+// // Get the button that opens the modal
+// var btn = document.getElementById("card__button");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-    // do things with the data here
-  modal.style.display = "block";
-}
+// // When the user clicks on the button, open the modal
+// btn.onclick = function() {
+//     // do things with the data here
+//   modal.style.display = "block";
+// }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
