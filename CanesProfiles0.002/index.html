@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="js/lib/all.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Carolina Hurricanes - home</title>
+    </head>
+    <body onload="getPlayers()">
+        <header id="page-hero" class="site-header">
+
+            <nav class="site-nav navbar navbar-expand-lg navbar-dark">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#page-hero">
+                        <img class="navbar-brand-icon mx-1" src="images/CanesAssets/PrimaryLogo.png" alt="">Carolina Hurricanes</a>
+
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation"><span class="navbar-toggler-icon"></span></button>
+
+                    <section class="collapse navbar-collapse" id="myTogglerNav">
+
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-item nav-link active" href="index.html">home</a>
+                            <a class="nav-item nav-link" href="analytics.html">analytics</a>
+                            <a class="nav-item nav-link" href="lines.html">lines</a>
+                            <a class="nav-item nav-link" href="team-stats.html">team stats</a>
+                        </div> <!-- Navbar -->
+
+                    </section>
+                    
+                </div> <!-- Container -->
+
+            </nav>
+
+            <section class="layout-hero d-flex align-items-start text-light text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-sm-8">
+                            
+                        </div> <!-- Col-11 -->
+                    </div> <!-- Row -->
+                </div> <!-- Container -->
+            </section>
+
+        </header>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- The Modal -->
+                    <div id="card__modal" class="modal">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-5 col-sm-3 col-md-2 col-xxl-1 pl-0">
+                                        <img class="img-fluid" id="modal__player__image" src="images/CanesHeadshots/Andrei SvechnikovHeadshot.jpg" alt="Andrei Svechnikov Headshot">
+                                    </div> <!-- col-5 -->
+                                    <div class="col-7 col-sm-9 col-md-10 col-xxl-1 pl-0">
+                                        <div class="row">
+                                            <div class="col-4 col-sm-2 border-right border-secondary">
+                                                <h5 id="modal__player__number">#37</h5>
+                                            </div>
+                                            <div class="col-8 col-sm-2">
+                                                <h6 id="modal__player__firstName">Andrei</h6>
+                                                <h6 id="modal__player__lastName">Svechnikov</h6>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary my-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                                    Show Player Info
+                                                </button>
+                                            </div>
+                                            <div class="collapse col-12" id="collapseExample">
+                                                <div class="card card-body">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- col-7 -->
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-11 col-md-10">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div> <!-- row -->
+                            </div> <!-- container-fluid -->
+                        </div> <!-- modal-content -->
+                    </div> <!-- modal -->
+                </div> <!-- col-12 -->
+            </div> <!-- row-->
+        </div> <!-- container -->
+
+        <article class="page-cards-section">
+
+            <div class="layout-cards container-fluid">
+                <div id="player__cards" class="row small-gutters">
+                </div> <!-- row (card injected from 'scripts.js')-->
+            </div> <!-- container -->
+
+        </article>
+
+        <footer class="site-footer bg-secondary d-flex justify-content-center">
+
+            <section class="layout-social py-5">
+                <div class="container-fluid">
+                    <a class="text-light px-3 text-decoration-none" href="http://twitter.com">
+                        <i class="layout-icon fab fa-twitter fa-3x"></i>
+                    </a>
+                    <a class="text-light px-3 text-decoration-none" href="http://linkedin.com">
+                        <i class="layout-icon fab fa-linkedin fa-3x"></i>
+                    </a>
+                    <a class="text-light px-3 text-decoration-none" href="http://github.com">
+                        <i class="layout-icon fab fa-github fa-3x"></i>
+                    </a>
+                </div> <!-- Container-fluid -->
+            </section>
+            
+
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/bootstrap.min.js"></script>
+        
+    </body>
+</html>
